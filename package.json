@@ -1,0 +1,19 @@
+{
+  "name": "edenstorm",
+  "scripts": {
+    "start": "concurrently \"parcel watch src/index.html\" \"ws -d dist\"",
+    "build": "parcel build src/index.html",
+    "clean": "rmdir /s /q dist && rmdir /s /q .cache"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "concurrently": "^4.1.1",
+    "local-web-server": "^3.0.3",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
