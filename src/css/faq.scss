@@ -1,0 +1,37 @@
+.faq {
+  @include container;
+
+  margin-bottom: 363px;
+}
+
+.question {
+  margin-bottom: 20px;
+
+  > summary {
+    background: $color-white;
+    border: 1px solid #eeeeee;
+    border-radius: 100px;
+    font-size: 22px;
+    list-style: none;
+    padding: 22px 50px;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  > p {
+    background: #fcfcfc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: $color-black;
+    margin: 0 auto;
+    padding: 30px 40px 40px;
+    width: 95%;
+
+    > a {
+      color: $color-blue-1;
+      font-weight: 500;
+    }
+  }
+}

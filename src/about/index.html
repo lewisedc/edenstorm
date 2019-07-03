@@ -8,25 +8,33 @@
 
     <title>edenstorm</title>
 
-    <link rel="icon" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="styles.scss" />
+    <link rel="icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/styles.scss" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav>
-      <a href="/"></a>
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">FAQs</a></li>
-        <li><a href="">Get started</a></li>
-      </ul>
+    <nav class="nav">
+      <div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="/about" class="nav-link active">About</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="nav-link">FAQs</a></li>
+        </ul>
+        <a href="/quote-generator" class="call-to-action-link">Get started</a>
+      </div>
     </nav>
 
-    <header>
+    <header class="header header-center header-with-image">
       <h1>Difficult problems require <strong>innovative solutions</strong></h1>
-      <img src="" alt="" />
+      <img src="/assets/images/innovativeSolutions.svg" alt="" />
     </header>
 
     <main>
@@ -80,32 +88,32 @@
       </article>
     </main>
 
-    <footer>
+    <footer class="footer">
       <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="Get a quote"></a>
+      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""></a>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact</a></li>
+        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="/about">About</a></li>
+          <li class="footer-link"><a href="/services">Services</a></li>
+          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+          <li class="footer-link"><a href="/faq">FAQ</a></li>
+          <li class="footer-link"><a href="/contant">Contact</a></li>
         </ul>
-        <ul>
-          <li>
-            <a href=""><img src="assets/images/twitterLogo.svg" alt=""/></a>
+        <ul class="social-links">
+          <li class="social-link">
+            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/facebookLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/instagramLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

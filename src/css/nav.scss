@@ -1,0 +1,44 @@
+.nav {
+  background: $color-white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  > div {
+    @include container;
+
+    align-items: center;
+    display: flex;
+    height: 107px;
+  }
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+}
+
+.nav-link {
+  color: $color-grey-3;
+  font-weight: 500;
+  margin-right: 34px;
+  padding-bottom: 10px;
+
+  &:hover,
+  &:focus,
+  &.active {
+    border-bottom: solid 4px $color-blue-1;
+    color: $color-grey-1;
+  }
+}
+
+.call-to-action-link {
+  @include button;
+
+  margin-left: auto;
+}

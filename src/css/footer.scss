@@ -1,0 +1,66 @@
+.footer {
+  @include container;
+
+  padding: 170px 0 56px;
+  text-align: center;
+
+  > h4 {
+    margin-bottom: 30px;
+  }
+
+  > a {
+    @include button;
+
+    margin-bottom: 141px;
+  }
+
+  > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    > a {
+      width: 125px;
+
+      > img {
+        width: auto;
+      }
+    }
+
+    > ul {
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
+.footer-link {
+  margin-right: 20px;
+
+  &::after {
+    color: $color-blue-1;
+    content: '•';
+    font-size: 28px;
+    margin-left: 20px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  > a {
+    color: $color-grey-1;
+  }
+}
+
+.social-link {
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

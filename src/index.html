@@ -8,62 +8,73 @@
 
     <title>edenstorm</title>
 
-    <link rel="icon" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="styles.scss" />
+    <link rel="icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/styles.scss" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav>
-      <a href="/"></a>
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">FAQs</a></li>
-        <li><a href="">Get started</a></li>
-      </ul>
+    <nav class="nav">
+      <div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="nav-link">FAQs</a></li>
+        </ul>
+        <a href="/quote-generator" class="call-to-action-link">Get started</a>
+      </div>
     </nav>
 
-    <header>
-      <h1>We specialise at at making brands <strong>stand out.</strong></h1>
-      <a href="">
-        Get a quote
-        <svg width="26" height="16" viewBox="0 0 26 16" fill="none">
-          <path
-            d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM0 9H25V7H0V9Z"
-            fill="white"
-          />
-        </svg>
-      </a>
+    <header class="homepage-header">
+      <div>
+        <h1>We specialise at making brands <strong>stand out.</strong></h1>
+        <a href="">
+          Get a quote
+          <svg width="26" height="16" viewBox="0 0 26 16" fill="none">
+            <path
+              d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM0 9H25V7H0V9Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+      <img src="/assets/images/standOut.svg" alt="" width="670" />
     </header>
 
     <main>
-      <section aria-label="solutions">
-        <ul>
-          <li>
+      <section aria-label="solutions" class="solutions">
+        <ul class="solutions-list">
+          <li class="solution">
             <h3>Brand Identity</h3>
-            <img src="assets/images/brandIdentity.svg" alt="" />
+            <img src="/assets/images/brandIdentity.svg" alt="" />
             <p>Brands are much more than a logo. We craft an experience.</p>
           </li>
-          <li>
+          <li class="solution">
             <h3>Web/App Design</h3>
-            <img src="assets/images/webDesign.svg" alt="" />
+            <img src="/assets/images/webDesign.svg" alt="" />
             <p>Beautiful bespoke websites & mobile applications.</p>
           </li>
-          <li>
+          <li class="solution">
             <h3>Digital Marketing</h3>
-            <img src="assets/images/digitalMarketing.svg" alt="" />
+            <img src="/assets/images/digitalMarketing.svg" alt="" />
             <p>Digital marketing management & strategies.</p>
           </li>
-          <li>
+          <li class="solution">
             <h3>Graphic Design</h3>
-            <img src="assets/images/graphicDesign.svg" alt="" />
+            <img src="/assets/images/graphicDesign.svg" alt="" />
             <p>We’ve got all your online & physical graphics covered.</p>
           </li>
         </ul>
       </section>
 
-      <article>
+      <article class="branding">
         <div>
           <h2>We create effective brands</h2>
           <p>
@@ -71,77 +82,80 @@
             philosophy, and flow. Our packages cover the whole spectrum of a
             brand. From inception to fruition, and everything thereafter.
           </p>
-          <a href="">Our services</a>
+          <a href="/services">Our services</a>
         </div>
-        <img src="assets/images/success.svg" alt="" />
+        <img src="/assets/images/success.svg" alt="" />
       </article>
 
-      <section>
+      <section class="projects">
         <h2>We work with innovative companies</h2>
-        <ul>
-          <li>
-            <a href="">
+        <ul class="projects-list">
+          <li class="project">
+            <a href="https://www.virtualyou.tech">
               The future of e-commerce
               <img
-                src="assets/images/company1.png"
+                src="/assets/images/company1.png"
                 alt="Screenshot of the virtualyou website"
               />
             </a>
           </li>
-          <li>
-            <a href="">
+          <li class="project">
+            <a href="https://www.outfittrs.com">
               A new fashion shopping experience
               <img
-                src="assets/images/company2.png"
+                src="/assets/images/company2.png"
                 alt="Screenshot of the outfittrs website"
               />
             </a>
           </li>
-          <li>
-            <a href="">
+          <li class="project">
+            <a href="https://www.whereinfornite.com">
               A viral gaming phenomenom
               <img
-                src="assets/images/company3.png"
+                src="/assets/images/company3.png"
                 alt="Screenshot of the WhereInFornite website and app"
               />
             </a>
           </li>
-          <li>
-            <a href="assets/images/company4.png">
+          <li class="project">
+            <a href="https://www.kentopera.com">
               Pop-up opera with a social impact
-              <img src="" alt="Screenshot of the KentOpera website" />
+              <img
+                src="/assets/images/company4.png"
+                alt="Screenshot of the KentOpera website"
+              />
             </a>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="Get a quote"></a>
+      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""></a>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact</a></li>
+        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="/about">About</a></li>
+          <li class="footer-link"><a href="/services">Services</a></li>
+          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+          <li class="footer-link"><a href="/faq">FAQ</a></li>
+          <li class="footer-link"><a href="/contant">Contact</a></li>
         </ul>
-        <ul>
-          <li>
-            <a href=""><img src="assets/images/twitterLogo.svg" alt=""/></a>
+        <ul class="social-links">
+          <li class="social-link">
+            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/facebookLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/instagramLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

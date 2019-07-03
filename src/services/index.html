@@ -8,97 +8,105 @@
 
     <title>edenstorm</title>
 
-    <link rel="icon" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="styles.scss" />
+    <link rel="icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/styles.scss" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <nav>
-      <a href="/"></a>
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">FAQs</a></li>
-        <li><a href="">Get started</a></li>
-      </ul>
+    <nav class="nav">
+      <div>
+        <a href="/" class="logo">
+          <img src="/assets/images/logo.png" alt="" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/services" class="nav-link active">Services</a></li>
+          <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="nav-link">FAQs</a></li>
+        </ul>
+        <a href="/quote-generator" class="call-to-action-link">Get started</a>
+      </div>
     </nav>
 
-    <header>
+    <header class="header">
       <h1>We do much more than create <strong>amazing websites</strong></h1>
     </header>
 
-    <main>
-      <ul>
-        <li>
+    <main class="services">
+      <ul class="services-list">
+        <li class="service">
           <h2>Brand Identity</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/brandIdentity.svg" alt="" />
           <p>Logo / Philosophy / Colours</p>
         </li>
-        <li>
+        <li class="service">
           <h2>Website Design</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/webDesign.svg" alt="" />
           <p>Bespoke / Responsive / CMS</p>
         </li>
-        <li>
+        <li class="service">
           <h2>App Design</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/appDesign.svg" alt="" />
           <p>iOS / Android / React Native</p>
         </li>
-        <li>
+        <li class="service">
           <h2>Digital Marketing</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/digitalMarketing.svg" alt="" />
           <p>Social Media / SEO / Ads</p>
         </li>
-        <li>
+        <li class="service">
           <h2>Graphic Design</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/graphicDesign.svg" alt="" />
           <p>Headers / Signatures / Cards</p>
         </li>
-        <li>
+        <li class="service">
           <h2>Discovery</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/discovery.svg" alt="" />
           <p>Research / Strategy / Planning</p>
         </li>
-        <li>
+        <li class="service">
           <h2>eCommerce</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/eCommerce.svg" alt="" />
           <p>Shopify / Woo / Custom</p>
         </li>
-        <li>
+        <li class="service">
           <h2>Prototyping</h2>
-          <img src="" alt="" />
+          <img src="/assets/images/Prototyping.svg" alt="" />
           <p>MVP / Wireframes / Mockups</p>
         </li>
       </ul>
     </main>
 
-    <footer>
+    <footer class="footer">
       <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="Get a quote"></a>
+      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""></a>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact</a></li>
+        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="/about">About</a></li>
+          <li class="footer-link"><a href="/services">Services</a></li>
+          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+          <li class="footer-link"><a href="/faq">FAQ</a></li>
+          <li class="footer-link"><a href="/contant">Contact</a></li>
         </ul>
-        <ul>
-          <li>
-            <a href=""><img src="assets/images/twitterLogo.svg" alt=""/></a>
+        <ul class="social-links">
+          <li class="social-link">
+            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/facebookLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
           </li>
-          <li>
-            <a href=""><img src="assets/images/instagramLogo.svg" alt=""/></a>
+          <li class="social-link">
+            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

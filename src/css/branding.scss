@@ -1,0 +1,29 @@
+.branding {
+  @include container;
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 180px;
+
+  > img {
+    order: -1;
+  }
+
+  > div {
+    margin-right: 50px;
+    width: 500px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    a {
+      @include button;
+    }
+  }
+}

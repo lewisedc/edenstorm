@@ -1,7 +1,7 @@
 {
   "name": "edenstorm",
   "scripts": {
-    "start": "concurrently \"parcel watch src/index.html\" \"ws -d dist\"",
+    "start": "concurrently \"parcel watch src/index.html src/about/index.html src/services/index.html src/portfolio/index.html src/faq/index.html src/quote-generator/index.html \" \"ws -d dist\"",
     "build": "parcel build src/index.html",
     "clean": "rmdir /s /q dist && rmdir /s /q .cache"
   },
