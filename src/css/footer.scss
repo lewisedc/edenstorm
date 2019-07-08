@@ -1,47 +1,63 @@
 .footer {
-  @include container;
-
-  padding: 170px 0 56px;
-  text-align: center;
-
-  > h4 {
-    margin-bottom: 30px;
-  }
-
-  > a {
-    @include button;
-
-    margin-bottom: 141px;
-  }
+  background: #fcfcfc;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 
   > div {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+    @include container;
 
-    > a {
-      width: 125px;
+    padding-top: 170px;
+    padding-bottom: 56px;
+    text-align: center;
 
-      > img {
-        width: auto;
-      }
+    > h4 {
+      margin-bottom: 30px;
     }
 
-    > ul {
+    > a {
+      @include button;
+
+      margin-bottom: 141px;
+    }
+
+    > div {
       align-items: center;
       display: flex;
+      justify-content: space-between;
+
+      > a {
+        display: block;
+        width: 125px;
+
+        > img {
+          width: 100%;
+        }
+      }
+
+      > ul {
+        align-items: center;
+        display: flex;
+      }
     }
   }
 }
 
 .footer-link {
+  align-items: center;
+  display: flex;
   margin-right: 20px;
 
   &::after {
+    background: url('/assets/images/ellipse.svg');
     color: $color-blue-1;
-    content: '•';
+    content: '';
+    display: inline-block;
     font-size: 28px;
+    height: 4px;
     margin-left: 20px;
+    width: 4px;
   }
 
   &:last-of-type {
@@ -62,5 +78,76 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  > a,
+  > a > img {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1450px) {
+  .footer > div {
+    padding-top: 85px;
+    padding-bottom: 40px;
+
+    > h4 {
+      margin-bottom: 40px;
+    }
+
+    > a {
+      margin-bottom: 100px;
+    }
+  }
+
+  .social-link {
+    margin-right: 15px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer > div {
+    padding-bottom: 43px;
+    padding-top: 113px;
+
+    > h4 {
+      margin-bottom: 30px;
+    }
+
+    > a {
+      margin-bottom: 113px;
+    }
+  }
+
+  .footer-link {
+    display: none;
+  }
+
+  .social-link {
+    margin-right: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer > div {
+    padding-bottom: 30px;
+    padding-top: 90px;
+
+    > a {
+      margin-bottom: 90px;
+    }
+
+    > div {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+
+      > a {
+        margin: 0 auto 20px;
+      }
+    }
   }
 }

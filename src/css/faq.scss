@@ -1,11 +1,16 @@
 .faq {
-  @include container;
-
-  margin-bottom: 363px;
+  padding-bottom: 363px;
 }
 
 .question {
+  @include container;
+
+  animation-duration: 1s;
   margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
 
   > summary {
     background: $color-white;
@@ -22,7 +27,7 @@
 
   > p {
     background: #fcfcfc;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     box-sizing: border-box;
     color: $color-black;
     margin: 0 auto;
@@ -32,6 +37,42 @@
     > a {
       color: $color-blue-1;
       font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .faq {
+    padding-bottom: 122px;
+  }
+
+  .question {
+    > p {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .faq {
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq {
+    padding-bottom: 150px;
+  }
+
+  .question {
+    > summary {
+      position: relative;
+      z-index: 1;
+    }
+
+    > p {
+      position: relative;
+      top: -10px;
     }
   }
 }

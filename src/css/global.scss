@@ -9,11 +9,18 @@ $color-orange: #ffab40;
 $color-pink: #f24568;
 $color-white: #fff;
 
-$container-width: 1360px;
-
 @mixin container {
   margin: 0 auto;
-  max-width: $container-width;
+  max-width: 1360px;
+
+  @media (max-width: 1450px) {
+    max-width: 1052px;
+  }
+
+  @media (max-width: 1100px) {
+    max-width: 670px;
+    padding: 0 12px;
+  }
 }
 
 @mixin button {
@@ -23,6 +30,7 @@ $container-width: 1360px;
   box-shadow: 0px 4px 4px rgba(100, 181, 246, 0.28);
   color: $color-white;
   display: inline-flex;
+  font-size: 16px;
   font-weight: 700;
   padding: 16px 32px;
   transition: box-shadow 0.3s;
@@ -32,8 +40,23 @@ $container-width: 1360px;
     box-shadow: 0px 4px 15px rgba(100, 181, 246, 0.58);
   }
 
+  &:disabled {
+    background: #dedede;
+    box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.28);
+  }
+
   > svg {
     margin-left: 10px;
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 15px;
+    padding: 11px 24px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 16px;
+    padding: 16px 32px;
   }
 }
 
@@ -41,7 +64,16 @@ body {
   color: $color-grey-1;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  margin-bottom: 555px;
   letter-spacing: 0.03em;
+
+  @media (max-width: 1450px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -58,11 +90,35 @@ h1,
 h4 {
   font-size: 60px;
   font-weight: 400;
+
+  @media (max-width: 1450px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
 }
 
 h2 {
   font-size: 40px;
   font-weight: 400;
+
+  @media (max-width: 1450px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 }
 
 p {
@@ -77,6 +133,7 @@ a {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 ul {
@@ -87,4 +144,15 @@ ul {
 
 img {
   height: auto;
+}
+
+input,
+textarea {
+  background: none;
+  border: none;
+}
+
+header,
+main {
+  background: $color-white;
 }

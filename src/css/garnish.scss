@@ -1,0 +1,76 @@
+.garnishes * {
+  position: absolute;
+}
+
+.garnish1 {
+  right: 0;
+  top: 125px;
+}
+
+.garnish2 {
+  left: 0;
+  top: 466px;
+}
+
+.garnish3 {
+  right: 0;
+  top: 1244px;
+}
+
+.garnish4 {
+  left: 0;
+  top: 2216px;
+}
+
+.garnish5 {
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.garnish6 {
+  left: 0;
+  top: 421px;
+}
+
+.garnish7 {
+  right: 0;
+  top: 1578px;
+}
+
+.garnish8 {
+  left: 0;
+  top: 187px;
+}
+
+.garnish9 {
+  right: 0;
+  top: 480px;
+}
+
+.garnish10 {
+  left: 0;
+  top: 175px;
+}
+
+.garnish11 {
+  right: 0;
+  top: 526px;
+}
+
+.garnish12 {
+  right: 0;
+  top: 146px;
+  z-index: 3;
+}
+
+.garnish13 {
+  left: 0;
+  top: 541px;
+}
+
+@media (max-width: 1700px) {
+  .garnishes {
+    display: none;
+  }
+}

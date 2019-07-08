@@ -1,0 +1,39 @@
+.portfolio-header {
+  padding-bottom: 160px;
+  padding-top: 247px;
+
+  h1 {
+    animation: fadeInSlideUp 1s cubic-bezier(0.6, 0.2, 0.1, 1);
+    margin: 0 auto;
+    max-width: 880px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1450px) {
+  .portfolio-header {
+    padding-bottom: 100px;
+    padding-top: 150px;
+
+    h1 {
+      max-width: 609px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .portfolio-header {
+    padding: 261px 15px 150px;
+
+    h1 {
+      max-width: 774px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio-header {
+    padding-bottom: 100px;
+    padding-top: 147px;
+  }
+}

@@ -19,8 +19,8 @@
   <body>
     <nav class="nav">
       <div>
-        <a href="/" class="logo">
-          <img src="/assets/images/logo.png" alt="" />
+        <a href="/" class="logo" aria-label="to home">
+          <img src="/assets/images/logo.png" alt="edenstorm logo" />
         </a>
         <ul class="nav-links">
           <li><a href="/about" class="nav-link active">About</a></li>
@@ -29,36 +29,74 @@
           <li><a href="/faq" class="nav-link">FAQs</a></li>
         </ul>
         <a href="/quote-generator" class="call-to-action-link">Get started</a>
+
+        <input
+          type="checkbox"
+          name="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+        />
+        <label
+          for="mobile-nav-toggle"
+          aria-label="Toggle nav"
+          class="mobile-nav-toggle-label"
+        >
+          <svg width="33" height="22" viewBox="0 0 33 22" fill="none">
+            <path
+              d="M0 22H33V18.3333H0V22ZM0 12.8333H33V9.16667H0V12.8333ZM0 0V3.66667H33V0H0Z"
+              fill="#1C1C1C"
+            />
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M1.97849 0L0 1.97849L10.0215 12L0 22.0215L1.97849 24L12 13.9785L22.0215 24L24 22.0215L13.9785 12L24 1.97849L22.0215 0L12 10.0215L1.97849 0Z"
+              fill="black"
+            />
+          </svg>
+        </label>
+        <ul class="mobile-nav-links">
+          <li><a href="/about" class="mobile-nav-link active">About</a></li>
+          <li><a href="/services" class="mobile-nav-link">Services</a></li>
+          <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="mobile-nav-link">FAQs</a></li>
+          <li>
+            <a href="/quote-generator" class="mobile-nav-link">Get started</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <header class="header header-center header-with-image">
-      <h1>Difficult problems require <strong>innovative solutions</strong></h1>
-      <img src="/assets/images/innovativeSolutions.svg" alt="" />
+    <header class="about-header">
+      <div>
+        <h1>
+          Difficult problems require <strong>innovative solutions</strong>
+        </h1>
+        <img src="/assets/images/innovativeSolutions.svg" alt="" />
+      </div>
     </header>
 
     <main>
-      <section aria-label="">
-        <ul>
-          <li>
+      <section aria-label="values" class="values">
+        <ul class="values-list">
+          <li class="value show-on-scroll">
             <h3>Innovate</h3>
-            <img src="" alt="" />
+            <img src="/assets/images/innovate.svg" alt="" />
             <p>
               Innovation is at the heart of our work. When things don’t exist,
               we make them. We’re willing to push the boundaries of possibility.
             </p>
           </li>
-          <li>
+          <li class="value show-on-scroll">
             <h3>Accessible</h3>
-            <img src="" alt="" />
+            <img src="/assets/images/accessible.svg" alt="" />
             <p>
               Keep it simple, stupid. Websites & applications shouldn’t be
               complicated. We cut no corners when it comes to accessibility.
             </p>
           </li>
-          <li>
+          <li class="value show-on-scroll">
             <h3>Reliable</h3>
-            <img src="" alt="" />
+            <img src="/assets/images/reliable.svg" alt="" />
             <p>
               We understand how important reliability is. We boast over
               99.99999% uptime, as well as around the clock availability for any
@@ -68,51 +106,74 @@
         </ul>
       </section>
 
-      <article>
+      <article class="team show-on-scroll">
         <div>
-          <h2>Hello there! We’re a small but effective team</h2>
-          <p>
+          <h2 class="show-on-scroll">
+            Hello there! We’re a small but effective team
+          </h2>
+          <p class="show-on-scroll">
             At heart, we’re entrepreneurs. We have an insatiable desire to
             create and learn. Over the years we have amassed a wealth of
             knowledge, spanning technology to design, business to customer
             service, and everything inbetween.
           </p>
-          <p>
+          <p class="show-on-scroll">
             We’ve been through it all. Failed startups and products, and
             massively successful games and applications. We know what it takes
             to succeed, and where to look to avoid pitfalls.
           </p>
-          <a href="">View our work</a>
+          <a href="/portfolio" class="show-on-scroll">View our work</a>
         </div>
-        <img src="" alt="" />
+        <img
+          src="/assets/images/team.svg"
+          width="747"
+          alt=""
+          class="show-on-scroll"
+        />
       </article>
     </main>
 
     <footer class="footer">
-      <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
-        <ul class="footer-links">
-          <li class="footer-link"><a href="/about">About</a></li>
-          <li class="footer-link"><a href="/services">Services</a></li>
-          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
-          <li class="footer-link"><a href="/faq">FAQ</a></li>
-          <li class="footer-link"><a href="/contant">Contact</a></li>
-        </ul>
-        <ul class="social-links">
-          <li class="social-link">
-            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
-          </li>
-        </ul>
+        <h4>Like what you see? <strong>Let’s work together</strong></h4>
+        <a href="/quote-generator">Get a quote</a>
+        <div>
+          <a href="/" aria-label="to home">
+            <img src="/assets/images/logo.png" alt="edenstorm logo" />
+          </a>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="/about">About</a></li>
+            <li class="footer-link"><a href="/services">Services</a></li>
+            <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+            <li class="footer-link"><a href="/faq">FAQ</a></li>
+            <li class="footer-link"><a href="/contant">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Twitter">
+                <img src="/assets/images/twitterLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Facebook">
+                <img src="/assets/images/facebookLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Instagram">
+                <img src="/assets/images/instagramLogo.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <div class="garnishes">
+      <img src="/assets/images/garnish5.svg" alt="" class="garnish5" />
+      <img src="/assets/images/garnish6.svg" alt="" class="garnish6" />
+      <img src="/assets/images/garnish7.svg" alt="" class="garnish7" />
+    </div>
 
     <script src="/index.js"></script>
   </body>

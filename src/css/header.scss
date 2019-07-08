@@ -14,6 +14,7 @@
 
     img {
       margin-top: 106px;
+      width: 100%;
     }
 
     &::after {
@@ -30,6 +31,14 @@
       position: absolute;
       height: 324px;
       width: 100%;
+    }
+  }
+
+  &.header-with-paragraph {
+    margin-bottom: 40px;
+
+    > p {
+      margin-top: 30px;
     }
   }
 

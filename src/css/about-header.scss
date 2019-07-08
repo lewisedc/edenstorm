@@ -1,0 +1,90 @@
+.about-header {
+  padding-bottom: 204px;
+  padding-top: 247px;
+  position: relative;
+
+  &::after {
+    background: linear-gradient(
+      180deg,
+      rgba(252, 252, 252, 0) 0%,
+      rgba(252, 252, 252, 0) 0.01%,
+      #fcfcfc 58.33%,
+      #ffffff 100%
+    );
+    bottom: 100px;
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 324px;
+    width: 100%;
+  }
+
+  > div {
+    @include container;
+
+    max-width: 1016px;
+    text-align: center;
+
+    h1 {
+      animation: fadeInSlideUp 1s cubic-bezier(0.6, 0.2, 0.1, 1);
+      margin: 0 auto 106px;
+      max-width: 880px;
+
+      > strong {
+        animation: fadeInSlideUp2 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
+        display: inline-block;
+      }
+    }
+
+    img {
+      animation: fadeIn 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .about-header {
+    padding-bottom: 72px;
+    padding-top: 150px;
+
+    &::after {
+      bottom: -50px;
+    }
+
+    > div {
+      max-width: 800px;
+
+      h1 {
+        margin-bottom: 52px;
+        max-width: 586px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-header {
+    padding-bottom: 150px;
+    padding-top: 261px;
+
+    &::after {
+      bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about-header {
+    padding-bottom: 100px;
+    padding-top: 147px;
+
+    &::after {
+      bottom: -20px;
+    }
+
+    > div > h1 {
+      margin-bottom: 100px;
+    }
+  }
+}

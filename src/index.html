@@ -19,8 +19,8 @@
   <body>
     <nav class="nav">
       <div>
-        <a href="/" class="logo">
-          <img src="/assets/images/logo.png" alt="" />
+        <a href="/" class="logo" aria-label="to home">
+          <img src="/assets/images/logo.png" alt="edenstorm logo" />
         </a>
         <ul class="nav-links">
           <li><a href="/about" class="nav-link">About</a></li>
@@ -29,44 +29,83 @@
           <li><a href="/faq" class="nav-link">FAQs</a></li>
         </ul>
         <a href="/quote-generator" class="call-to-action-link">Get started</a>
+
+        <input
+          type="checkbox"
+          name="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+        />
+        <label
+          for="mobile-nav-toggle"
+          aria-label="Toggle nav"
+          class="mobile-nav-toggle-label"
+        >
+          <svg width="33" height="22" viewBox="0 0 33 22" fill="none">
+            <path
+              d="M0 22H33V18.3333H0V22ZM0 12.8333H33V9.16667H0V12.8333ZM0 0V3.66667H33V0H0Z"
+              fill="#1C1C1C"
+            />
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M1.97849 0L0 1.97849L10.0215 12L0 22.0215L1.97849 24L12 13.9785L22.0215 24L24 22.0215L13.9785 12L24 1.97849L22.0215 0L12 10.0215L1.97849 0Z"
+              fill="black"
+            />
+          </svg>
+        </label>
+        <ul class="mobile-nav-links">
+          <li><a href="/about" class="mobile-nav-link">About</a></li>
+          <li><a href="/services" class="mobile-nav-link">Services</a></li>
+          <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="mobile-nav-link">FAQs</a></li>
+          <li>
+            <a href="/quote-generator" class="mobile-nav-link">Get started</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
     <header class="homepage-header">
       <div>
-        <h1>We specialise at making brands <strong>stand out.</strong></h1>
-        <a href="">
-          Get a quote
-          <svg width="26" height="16" viewBox="0 0 26 16" fill="none">
-            <path
-              d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM0 9H25V7H0V9Z"
-              fill="white"
-            />
-          </svg>
-        </a>
+        <div>
+          <h1>
+            We specialise at making
+            <span>brands <strong>stand out.</strong></span>
+          </h1>
+          <a href="/quote-generator">
+            Get a quote
+            <svg width="26" height="16" viewBox="0 0 26 16" fill="none">
+              <path
+                d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.29289L19.3431 0.928932C18.9526 0.538408 18.3195 0.538408 17.9289 0.928932C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM0 9H25V7H0V9Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+        <img src="/assets/images/standOut.svg" alt="" width="670" />
       </div>
-      <img src="/assets/images/standOut.svg" alt="" width="670" />
     </header>
 
     <main>
       <section aria-label="solutions" class="solutions">
         <ul class="solutions-list">
-          <li class="solution">
+          <li class="solution show-on-scroll">
             <h3>Brand Identity</h3>
             <img src="/assets/images/brandIdentity.svg" alt="" />
             <p>Brands are much more than a logo. We craft an experience.</p>
           </li>
-          <li class="solution">
+          <li class="solution show-on-scroll">
             <h3>Web/App Design</h3>
             <img src="/assets/images/webDesign.svg" alt="" />
             <p>Beautiful bespoke websites & mobile applications.</p>
           </li>
-          <li class="solution">
+          <li class="solution show-on-scroll">
             <h3>Digital Marketing</h3>
             <img src="/assets/images/digitalMarketing.svg" alt="" />
             <p>Digital marketing management & strategies.</p>
           </li>
-          <li class="solution">
+          <li class="solution show-on-scroll">
             <h3>Graphic Design</h3>
             <img src="/assets/images/graphicDesign.svg" alt="" />
             <p>We’ve got all your online & physical graphics covered.</p>
@@ -76,21 +115,26 @@
 
       <article class="branding">
         <div>
-          <h2>We create effective brands</h2>
-          <p>
+          <h2 class="show-on-scroll">We create effective brands</h2>
+          <p class="show-on-scroll">
             Effective brands are consistent. Consistent in their design,
             philosophy, and flow. Our packages cover the whole spectrum of a
             brand. From inception to fruition, and everything thereafter.
           </p>
-          <a href="/services">Our services</a>
+          <a href="/services" class="show-on-scroll">Our services</a>
         </div>
-        <img src="/assets/images/success.svg" alt="" />
+        <img
+          src="/assets/images/success.svg"
+          alt=""
+          width="747"
+          class="show-on-scroll"
+        />
       </article>
 
-      <section class="projects">
-        <h2>We work with innovative companies</h2>
+      <section class="projects ">
+        <h2 class="show-on-scroll">We work with innovative companies</h2>
         <ul class="projects-list">
-          <li class="project">
+          <li class="project show-on-scroll">
             <a href="https://www.virtualyou.tech">
               The future of e-commerce
               <img
@@ -99,7 +143,7 @@
               />
             </a>
           </li>
-          <li class="project">
+          <li class="project show-on-scroll">
             <a href="https://www.outfittrs.com">
               A new fashion shopping experience
               <img
@@ -108,7 +152,7 @@
               />
             </a>
           </li>
-          <li class="project">
+          <li class="project show-on-scroll">
             <a href="https://www.whereinfornite.com">
               A viral gaming phenomenom
               <img
@@ -117,7 +161,7 @@
               />
             </a>
           </li>
-          <li class="project">
+          <li class="project show-on-scroll">
             <a href="https://www.kentopera.com">
               Pop-up opera with a social impact
               <img
@@ -131,30 +175,47 @@
     </main>
 
     <footer class="footer">
-      <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
-        <ul class="footer-links">
-          <li class="footer-link"><a href="/about">About</a></li>
-          <li class="footer-link"><a href="/services">Services</a></li>
-          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
-          <li class="footer-link"><a href="/faq">FAQ</a></li>
-          <li class="footer-link"><a href="/contant">Contact</a></li>
-        </ul>
-        <ul class="social-links">
-          <li class="social-link">
-            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
-          </li>
-        </ul>
+        <h4>Like what you see? <strong>Let’s work together</strong></h4>
+        <a href="/quote-generator">Get a quote</a>
+        <div>
+          <a href="/" aria-label="to home">
+            <img src="/assets/images/logo.png" alt="edenstorm logo" />
+          </a>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="/about">About</a></li>
+            <li class="footer-link"><a href="/services">Services</a></li>
+            <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+            <li class="footer-link"><a href="/faq">FAQ</a></li>
+            <li class="footer-link"><a href="/contant">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Twitter">
+                <img src="/assets/images/twitterLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Facebook">
+                <img src="/assets/images/facebookLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Instagram">
+                <img src="/assets/images/instagramLogo.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <div class="garnishes">
+      <img src="/assets/images/garnish1.svg" alt="" class="garnish1" />
+      <img src="/assets/images/garnish2.svg" alt="" class="garnish2" />
+      <img src="/assets/images/garnish3.svg" alt="" class="garnish3" />
+      <img src="/assets/images/garnish4.svg" alt="" class="garnish4" />
+    </div>
 
     <script src="/index.js"></script>
   </body>

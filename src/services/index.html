@@ -19,8 +19,8 @@
   <body>
     <nav class="nav">
       <div>
-        <a href="/" class="logo">
-          <img src="/assets/images/logo.png" alt="" />
+        <a href="/" class="logo" aria-label="to home">
+          <img src="/assets/images/logo.png" alt="edenstorm logo" />
         </a>
         <ul class="nav-links">
           <li><a href="/about" class="nav-link">About</a></li>
@@ -29,51 +29,89 @@
           <li><a href="/faq" class="nav-link">FAQs</a></li>
         </ul>
         <a href="/quote-generator" class="call-to-action-link">Get started</a>
+
+        <input
+          type="checkbox"
+          name="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+        />
+        <label
+          for="mobile-nav-toggle"
+          aria-label="Toggle nav"
+          class="mobile-nav-toggle-label"
+        >
+          <svg width="33" height="22" viewBox="0 0 33 22" fill="none">
+            <path
+              d="M0 22H33V18.3333H0V22ZM0 12.8333H33V9.16667H0V12.8333ZM0 0V3.66667H33V0H0Z"
+              fill="#1C1C1C"
+            />
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M1.97849 0L0 1.97849L10.0215 12L0 22.0215L1.97849 24L12 13.9785L22.0215 24L24 22.0215L13.9785 12L24 1.97849L22.0215 0L12 10.0215L1.97849 0Z"
+              fill="black"
+            />
+          </svg>
+        </label>
+        <ul class="mobile-nav-links">
+          <li><a href="/about" class="mobile-nav-link">About</a></li>
+          <li>
+            <a href="/services" class="mobile-nav-link active">Services</a>
+          </li>
+          <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="mobile-nav-link">FAQs</a></li>
+          <li>
+            <a href="/quote-generator" class="mobile-nav-link">Get started</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <header class="header">
-      <h1>We do much more than create <strong>amazing websites</strong></h1>
+    <header class="services-header">
+      <div>
+        <h1>We do much more than create <strong>amazing websites</strong></h1>
+      </div>
     </header>
 
-    <main class="services">
+    <main>
       <ul class="services-list">
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Brand Identity</h2>
           <img src="/assets/images/brandIdentity.svg" alt="" />
           <p>Logo / Philosophy / Colours</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Website Design</h2>
           <img src="/assets/images/webDesign.svg" alt="" />
           <p>Bespoke / Responsive / CMS</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>App Design</h2>
           <img src="/assets/images/appDesign.svg" alt="" />
           <p>iOS / Android / React Native</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Digital Marketing</h2>
           <img src="/assets/images/digitalMarketing.svg" alt="" />
           <p>Social Media / SEO / Ads</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Graphic Design</h2>
           <img src="/assets/images/graphicDesign.svg" alt="" />
           <p>Headers / Signatures / Cards</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Discovery</h2>
           <img src="/assets/images/discovery.svg" alt="" />
           <p>Research / Strategy / Planning</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>eCommerce</h2>
           <img src="/assets/images/eCommerce.svg" alt="" />
           <p>Shopify / Woo / Custom</p>
         </li>
-        <li class="service">
+        <li class="service show-on-scroll">
           <h2>Prototyping</h2>
           <img src="/assets/images/Prototyping.svg" alt="" />
           <p>MVP / Wireframes / Mockups</p>
@@ -82,30 +120,45 @@
     </main>
 
     <footer class="footer">
-      <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
-        <ul class="footer-links">
-          <li class="footer-link"><a href="/about">About</a></li>
-          <li class="footer-link"><a href="/services">Services</a></li>
-          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
-          <li class="footer-link"><a href="/faq">FAQ</a></li>
-          <li class="footer-link"><a href="/contant">Contact</a></li>
-        </ul>
-        <ul class="social-links">
-          <li class="social-link">
-            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
-          </li>
-        </ul>
+        <h4>Like what you see? <strong>Let’s work together</strong></h4>
+        <a href="/quote-generator">Get a quote</a>
+        <div>
+          <a href="/" aria-label="to home">
+            <img src="/assets/images/logo.png" alt="edenstorm logo" />
+          </a>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="/about">About</a></li>
+            <li class="footer-link"><a href="/services">Services</a></li>
+            <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+            <li class="footer-link"><a href="/faq">FAQ</a></li>
+            <li class="footer-link"><a href="/contant">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Twitter">
+                <img src="/assets/images/twitterLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Facebook">
+                <img src="/assets/images/facebookLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Instagram">
+                <img src="/assets/images/instagramLogo.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <div class="garnishes">
+      <img src="/assets/images/garnish8.svg" alt="" class="garnish8" />
+      <img src="/assets/images/garnish9.svg" alt="" class="garnish9" />
+    </div>
 
     <script src="/index.js"></script>
   </body>

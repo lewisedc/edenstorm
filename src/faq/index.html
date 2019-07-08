@@ -19,8 +19,8 @@
   <body>
     <nav class="nav">
       <div>
-        <a href="/" class="logo">
-          <img src="/assets/images/logo.png" alt="" />
+        <a href="/" class="logo" aria-label="to home">
+          <img src="/assets/images/logo.png" alt="edenstorm logo" />
         </a>
         <ul class="nav-links">
           <li><a href="/about" class="nav-link">About</a></li>
@@ -29,17 +29,51 @@
           <li><a href="/faq" class="nav-link active">FAQs</a></li>
         </ul>
         <a href="/quote-generator" class="call-to-action-link">Get started</a>
+
+        <input
+          type="checkbox"
+          name="mobile-nav-toggle"
+          id="mobile-nav-toggle"
+          class="mobile-nav-toggle"
+        />
+        <label
+          for="mobile-nav-toggle"
+          aria-label="Toggle nav"
+          class="mobile-nav-toggle-label"
+        >
+          <svg width="33" height="22" viewBox="0 0 33 22" fill="none">
+            <path
+              d="M0 22H33V18.3333H0V22ZM0 12.8333H33V9.16667H0V12.8333ZM0 0V3.66667H33V0H0Z"
+              fill="#1C1C1C"
+            />
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M1.97849 0L0 1.97849L10.0215 12L0 22.0215L1.97849 24L12 13.9785L22.0215 24L24 22.0215L13.9785 12L24 1.97849L22.0215 0L12 10.0215L1.97849 0Z"
+              fill="black"
+            />
+          </svg>
+        </label>
+        <ul class="mobile-nav-links">
+          <li><a href="/about" class="mobile-nav-link">About</a></li>
+          <li><a href="/services" class="mobile-nav-link">Services</a></li>
+          <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="/faq" class="mobile-nav-link active">FAQs</a></li>
+          <li>
+            <a href="/quote-generator" class="mobile-nav-link">Get started</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <header class="header header-center">
+    <header class="faq-header">
       <h1>
         Got a burning question? We might have it <strong>answered</strong>
       </h1>
     </header>
 
     <main class="faq">
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>How much do you charge?</summary>
         <p>
           As with everything, it depends on the scope and scale of your needs.
@@ -49,7 +83,7 @@
           series of questions and can generate an accurate quote in realtime.
         </p>
       </details>
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>How long will it take?</summary>
         <p>
           It depends. A static one-page site? 3 days. A fully fledged social
@@ -58,7 +92,7 @@
           We’ll reply within 24 hours with a more accurate quote for you.
         </p>
       </details>
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>How much creative control do I get?</summary>
         <p>
           It depends. A static one-page site? 3 days. A fully fledged social
@@ -67,7 +101,7 @@
           We’ll reply within 24 hours with a more accurate quote for you.
         </p>
       </details>
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>I have an idea, can you help me see it through?</summary>
         <p>
           It depends. A static one-page site? 3 days. A fully fledged social
@@ -76,7 +110,7 @@
           We’ll reply within 24 hours with a more accurate quote for you.
         </p>
       </details>
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>Can you do _____________ ?</summary>
         <p>
           It depends. A static one-page site? 3 days. A fully fledged social
@@ -85,7 +119,7 @@
           We’ll reply within 24 hours with a more accurate quote for you.
         </p>
       </details>
-      <details class="question">
+      <details class="question show-on-scroll">
         <summary>How many times can I revise stuff?</summary>
         <p>
           It depends. A static one-page site? 3 days. A fully fledged social
@@ -97,30 +131,45 @@
     </main>
 
     <footer class="footer">
-      <h4>Like what you see? <strong>Let’s work together</strong></h4>
-      <a href="/quote-generator">Get a quote</a>
       <div>
-        <a href=""><img src="/assets/images/logo.png" alt=""/></a>
-        <ul class="footer-links">
-          <li class="footer-link"><a href="/about">About</a></li>
-          <li class="footer-link"><a href="/services">Services</a></li>
-          <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
-          <li class="footer-link"><a href="/faq">FAQ</a></li>
-          <li class="footer-link"><a href="/contant">Contact</a></li>
-        </ul>
-        <ul class="social-links">
-          <li class="social-link">
-            <a href=""><img src="/assets/images/twitterLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/facebookLogo.svg" alt=""/></a>
-          </li>
-          <li class="social-link">
-            <a href=""><img src="/assets/images/instagramLogo.svg" alt=""/></a>
-          </li>
-        </ul>
+        <h4>Like what you see? <strong>Let’s work together</strong></h4>
+        <a href="/quote-generator">Get a quote</a>
+        <div>
+          <a href="/" aria-label="to home">
+            <img src="/assets/images/logo.png" alt="edenstorm logo" />
+          </a>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="/about">About</a></li>
+            <li class="footer-link"><a href="/services">Services</a></li>
+            <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
+            <li class="footer-link"><a href="/faq">FAQ</a></li>
+            <li class="footer-link"><a href="/contant">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Twitter">
+                <img src="/assets/images/twitterLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Facebook">
+                <img src="/assets/images/facebookLogo.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-link">
+              <a href="" aria-label="to edenstorms Instagram">
+                <img src="/assets/images/instagramLogo.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+
+    <div class="garnishes">
+      <img src="/assets/images/garnish12.svg" alt="" class="garnish12" />
+      <img src="/assets/images/garnish13.svg" alt="" class="garnish13" />
+    </div>
 
     <script src="/index.js"></script>
   </body>

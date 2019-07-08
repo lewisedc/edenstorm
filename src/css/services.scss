@@ -1,13 +1,10 @@
-.services {
+.services-list {
   @include container;
 
-  margin-bottom: 300px;
-}
-
-.services-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 300px;
 }
 
 .service {
@@ -17,6 +14,26 @@
   flex-direction: column;
   margin-bottom: 115px;
   width: 275px;
+
+  &:nth-child(1),
+  &:nth-child(5) {
+    animation-duration: 1s;
+  }
+
+  &:nth-child(2),
+  &:nth-child(6) {
+    animation-duration: 1.1s;
+  }
+
+  &:nth-child(3),
+  &:nth-child(7) {
+    animation-duration: 1.2s;
+  }
+
+  &:nth-child(4),
+  &:nth-child(8) {
+    animation-duration: 1.3s;
+  }
 
   &:nth-child(5),
   &:nth-child(6),
@@ -34,5 +51,42 @@
   > h2 {
     font-size: 30px;
     margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .services-list {
+    padding-bottom: 200px;
+  }
+
+  .service {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .service {
+    margin-bottom: 150px;
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-bottom: 150px;
+    }
+  }
+}
+
+@media (max-width: 573px) {
+  .services-list {
+    padding-bottom: 150px;
+  }
+
+  .service {
+    margin-bottom: 80px;
+
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
+      margin-bottom: 80px;
+    }
   }
 }

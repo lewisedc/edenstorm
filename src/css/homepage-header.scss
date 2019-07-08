@@ -1,20 +1,114 @@
 .homepage-header {
-  @include container;
-
-  align-items: center;
-  display: flex;
-  margin-bottom: 150px;
-  margin-top: 207px;
-
   > div {
-    width: 688px;
+    @include container;
 
-    h1 {
-      margin-bottom: 50px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 150px;
+    padding-top: 207px;
+    position: relative;
+
+    &::after {
+      background: url('/assets/images/header-garnish.svg') no-repeat;
+      background-size: 100%;
+      content: '';
+      display: block;
+      height: 995px;
+      position: absolute;
+      right: 0;
+      top: 137px;
+      width: 998px;
     }
 
-    a {
-      @include button;
+    > div {
+      flex-shrink: 0;
+      position: relative;
+      width: 688px;
+      z-index: 1;
+
+      h1 {
+        animation: fadeInSlideUp 1s cubic-bezier(0.6, 0.2, 0.1, 1);
+        margin-bottom: 50px;
+
+        > span {
+          animation: fadeInSlideUp2 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
+          display: inline-block;
+        }
+      }
+
+      a {
+        @include button;
+
+        animation: fadeInSlideUp 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0.1s forwards;
+        font-size: 20px;
+        opacity: 0;
+      }
+    }
+
+    > img {
+      animation: fadeIn 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
+      max-width: 670px;
+      min-width: 0;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .homepage-header > div {
+    padding-bottom: 100px;
+    padding-top: 140px;
+
+    &::after {
+      height: 618px;
+      width: 619px;
+    }
+
+    > div {
+      width: 445px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .homepage-header > div {
+    flex-direction: column;
+    padding-bottom: 150px;
+    padding-top: 106px;
+
+    &::after {
+      height: 611px;
+      width: 609px;
+    }
+
+    > div {
+      text-align: center;
+      width: 100%;
+    }
+
+    > img {
+      margin-bottom: 67px;
+      order: -1;
+    }
+  }
+}
+
+@media (max-width: 714px) {
+  .homepage-header div::after {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .homepage-header > div {
+    padding-bottom: 100px;
+    padding-top: 120px;
+
+    > img {
+      margin-bottom: 52px;
     }
   }
 }

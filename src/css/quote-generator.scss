@@ -1,0 +1,174 @@
+.quote-generator {
+  padding-bottom: 292px;
+
+  > div {
+    @include container;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    > img {
+      margin-bottom: 50px;
+    }
+
+    > button {
+      @include button;
+
+      font-size: 18px;
+    }
+  }
+
+  > form > div:last-of-type {
+    align-items: center;
+    display: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1080px;
+
+    > button {
+      @include button;
+    }
+
+    > p {
+      color: #54d679;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+.form-question {
+  display: none;
+  margin-top: 247px;
+  text-align: center;
+
+  &.pages > div {
+    max-width: 1130px;
+  }
+
+  > span {
+    color: $color-blue-1;
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  > p {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 90px;
+  }
+
+  > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 80px;
+    max-width: 815px;
+  }
+}
+
+.form-answer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 215px;
+  justify-content: center;
+  position: relative;
+  width: 185px;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+
+    &:hover + svg path {
+      fill: rgba(217, 238, 255, 0.5);
+    }
+
+    &:checked + svg path {
+      fill: $color-blue-2;
+    }
+  }
+
+  > svg {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  > img {
+    margin-bottom: 15px;
+  }
+
+  > p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.form-details {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin-top: 227px;
+
+  > p:first-of-type {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
+  > p:last-of-type {
+    color: #54d679;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  > input {
+    border-bottom: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    outline: none;
+    padding: 22px 32px;
+    height: 65px;
+    width: 517px;
+
+    &:focus {
+      background: #f7f7f7;
+      border-color: transparent;
+      border-radius: 10px;
+    }
+  }
+
+  > textarea {
+    border-bottom: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    height: 175px;
+    margin-bottom: 50px;
+    outline: none;
+    padding: 22px 32px;
+    resize: none;
+    width: 517px;
+
+    &:focus {
+      background: #f7f7f7;
+      border-color: transparent;
+      border-radius: 10px;
+    }
+  }
+
+  > button {
+    @include button;
+    margin-bottom: 30px;
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.58);
+    }
+  }
+
+  > a {
+    color: $color-grey-1;
+    font-weight: 300;
+  }
+}
