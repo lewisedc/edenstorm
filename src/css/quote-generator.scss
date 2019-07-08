@@ -10,6 +10,9 @@
 
     > img {
       margin-bottom: 50px;
+      max-height: 334px;
+      max-width: 600px;
+      width: 100%;
     }
 
     > button {
@@ -19,28 +22,32 @@
     }
   }
 
-  > form > div:last-of-type {
-    align-items: center;
-    display: none;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1080px;
+  > form {
+    @include container;
 
-    > button {
-      @include button;
-    }
+    > div:last-of-type {
+      align-items: center;
+      display: none;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1080px;
 
-    > p {
-      color: #54d679;
-      font-size: 24px;
-      font-weight: bold;
+      > button {
+        @include button;
+      }
+
+      > p {
+        color: #54d679;
+        font-size: 24px;
+        font-weight: bold;
+      }
     }
   }
 }
 
 .form-question {
   display: none;
-  margin-top: 247px;
+  padding-top: 247px;
   text-align: center;
 
   &.pages > div {
@@ -50,7 +57,7 @@
   > span {
     color: $color-blue-1;
     font-size: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
   > p {
@@ -62,6 +69,7 @@
   > div {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto 80px;
     max-width: 815px;
@@ -81,7 +89,8 @@
     position: absolute;
     opacity: 0;
 
-    &:hover + svg path {
+    &:hover + svg path,
+    &:focus + svg path {
       fill: rgba(217, 238, 255, 0.5);
     }
 
@@ -94,16 +103,19 @@
     left: 0;
     position: absolute;
     top: 0;
-    z-index: -1;
   }
 
   > img {
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
   }
 
   > p {
     font-size: 24px;
     font-weight: 400;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -116,6 +128,7 @@
   > p:first-of-type {
     font-size: 60px;
     margin-bottom: 25px;
+    text-align: center;
   }
 
   > p:last-of-type {
@@ -129,10 +142,11 @@
     border-bottom: 1px solid #c4c4c4;
     box-sizing: border-box;
     margin-bottom: 15px;
+    max-width: 517px;
     outline: none;
     padding: 22px 32px;
     height: 65px;
-    width: 517px;
+    width: 100%;
 
     &:focus {
       background: #f7f7f7;
@@ -146,10 +160,11 @@
     box-sizing: border-box;
     height: 175px;
     margin-bottom: 50px;
+    max-width: 517px;
     outline: none;
     padding: 22px 32px;
     resize: none;
-    width: 517px;
+    width: 100%;
 
     &:focus {
       background: #f7f7f7;
@@ -170,5 +185,136 @@
   > a {
     color: $color-grey-1;
     font-weight: 300;
+  }
+}
+
+@media (max-width: 1450px) {
+  .quote-generator {
+    padding-bottom: 200px;
+  }
+
+  .form-question {
+    padding-top: 173px;
+
+    > span {
+      font-size: 18px;
+    }
+
+    > p {
+      font-size: 24px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .form-details {
+    margin-top: 174px;
+
+    p:first-of-type {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p:last-of-type {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    textarea {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .form-question {
+    padding-top: 246px;
+
+    > p {
+      font-size: 30px;
+      margin-bottom: 90px;
+    }
+  }
+
+  .form-details {
+    margin-top: 246px;
+
+    p:first-of-type {
+      font-size: 60px;
+      margin-bottom: 25px;
+    }
+
+    p:last-of-type {
+      font-size: 34px;
+      margin-bottom: 50px;
+    }
+
+    textarea {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .form-answer {
+    height: 118px;
+    width: 102px;
+
+    &:first-of-type {
+      margin-left: 10px;
+    }
+
+    &:last-of-type {
+      margin-left: 10px;
+    }
+
+    > svg {
+      height: 118px;
+      width: 102px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .form-question {
+    padding-top: 112px;
+
+    > div {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-answer {
+    margin-bottom: 80px;
+  }
+
+  .quote-generator > form > div:last-of-type {
+    flex-direction: column;
+
+    > button:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    > p {
+      order: -1;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-details {
+    margin-top: 142px;
+
+    p:first-of-type {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p:last-of-type {
+      font-size: 24px;
+      margin-bottom: 60px;
+    }
+
+    textarea {
+      margin-bottom: 60px;
+    }
   }
 }

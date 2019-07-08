@@ -8,20 +8,37 @@
   animation-duration: 1s;
   margin-bottom: 20px;
 
+  &[open] summary::after {
+    transform: rotate(-90deg);
+  }
+
   &:last-of-type {
     margin-bottom: 0px;
   }
 
   > summary {
+    align-items: center;
     background: $color-white;
     border: 1px solid #eeeeee;
     border-radius: 100px;
+    display: flex;
     font-size: 22px;
     list-style: none;
     padding: 22px 50px;
 
     &::-webkit-details-marker {
       display: none;
+    }
+
+    &::after {
+      background: url('/assets/images/carat.svg') no-repeat;
+      background-size: 100%;
+      content: '';
+      display: inline-block;
+      height: 17px;
+      margin-left: auto;
+      right: 53px;
+      width: 23px;
     }
   }
 
