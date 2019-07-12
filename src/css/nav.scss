@@ -2,22 +2,33 @@
   animation-duration: 0.3s;
   animation-timing-function: cubic-bezier(0.6, 0.2, 0.1, 1);
   background: $color-white;
+  border-bottom: solid 1px transparent;
+  height: 107px;
   position: absolute;
   top: 0;
+  transition: height 0.3s, border-bottom-color 0.3s;
   width: 100%;
   z-index: 3;
+
+  &.scrolled {
+    animation-name: slideDown;
+    border-bottom: solid 1px #eeeeee;
+    height: 75px;
+    position: fixed;
+  }
 
   > div {
     @include container;
 
     align-items: center;
     display: flex;
-    height: 107px;
+    height: 100%;
   }
 }
 
 .logo {
   margin-right: auto;
+  width: 187px;
 
   > img {
     width: 100%;
@@ -69,6 +80,11 @@
   &:checked ~ .mobile-nav-links {
     display: flex;
   }
+
+  &:checked ~ .overlay {
+    display: block;
+    opacity: 0.5;
+  }
 }
 
 .mobile-nav-toggle-label {
@@ -82,8 +98,22 @@
   }
 }
 
+.overlay {
+  background: $color-black;
+  content: '';
+  display: none;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+
 .mobile-nav-links {
   align-items: center;
+  animation: slideDown 0.3s;
   background: $color-white;
   box-sizing: border-box;
   display: none;
@@ -91,15 +121,20 @@
   height: 100vh;
   justify-content: space-between;
   left: 0;
-  padding: 100px 0;
+  max-height: 335px;
+  padding: 40px 0;
   position: fixed;
   top: 0;
   width: 100%;
+
+  li:last-of-type a {
+    @include button;
+  }
 }
 
 .mobile-nav-link {
   color: $color-grey-3;
-  font-size: 40px;
+  font-size: 24px;
 
   &.active {
     color: $color-blue-1;
@@ -113,8 +148,12 @@
 }
 
 @media (max-width: 1100px) {
-  .nav > div {
+  .nav {
     height: 96px;
+
+    &.scrolled {
+      height: 96px;
+    }
   }
 
   .nav-links,
@@ -127,8 +166,12 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .nav > div {
+@media (max-width: 500px) {
+  .nav {
     height: 62px;
+
+    &.scrolled {
+      height: 62px;
+    }
   }
 }

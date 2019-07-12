@@ -11,7 +11,11 @@ function initialise() {
 export function shouldElementsAnimate() {
   elementsToShow.forEach(element => {
     if (isElementInViewport(element)) {
-      element.style.animationName = 'fadeInSlideUp';
+      if (element.tagName === 'IMG') {
+        element.style.animationName = 'fadeIn';
+      } else {
+        element.style.animationName = 'fadeInSlideUp';
+      }
     }
   });
 }

@@ -7,11 +7,11 @@ export function shouldNavDisplay() {
   lastPageScroll = pageScroll;
   pageScroll = window.pageYOffset;
 
-  if (lastPageScroll > pageScroll && pageScroll > 100) {
-    nav.style.position = 'fixed';
-    nav.style.animationName = 'slideDown';
+  if (pageScroll === 0) {
+    nav.classList.remove('scrolled');
+  } else if (lastPageScroll > pageScroll) {
+    nav.classList.add('scrolled');
   } else if (lastPageScroll < pageScroll) {
-    nav.style.position = 'absolute';
-    nav.style.animationName = '';
+    nav.classList.remove('scrolled');
   }
 }

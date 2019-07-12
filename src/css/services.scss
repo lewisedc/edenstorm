@@ -61,12 +61,22 @@
 
   .service {
     margin-bottom: 80px;
+
+    &:last-of-type {
+      margin-left: 113px;
+      margin-right: auto;
+    }
   }
 }
 
 @media (max-width: 1100px) {
   .service {
     margin-bottom: 150px;
+
+    &:last-of-type {
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     &:nth-child(5),
     &:nth-child(6) {

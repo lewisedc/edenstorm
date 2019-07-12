@@ -9,6 +9,7 @@
     flex-direction: column;
 
     > img {
+      animation: fadeIn 1.3s cubic-bezier(0.6, 0.2, 0.1, 1);
       margin-bottom: 50px;
       max-height: 334px;
       max-width: 600px;
@@ -18,6 +19,7 @@
     > button {
       @include button;
 
+      animation: fadeInSlideUp 1.5s cubic-bezier(0.6, 0.2, 0.1, 1);
       font-size: 18px;
     }
   }
@@ -64,6 +66,13 @@
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 90px;
+
+    > span {
+      display: block;
+      color: #a6a6a6;
+      font-size: 16px;
+      margin-top: 10px;
+    }
   }
 
   > div {
@@ -123,7 +132,7 @@
   align-items: center;
   display: none;
   flex-direction: column;
-  margin-top: 227px;
+  padding-top: 227px;
 
   > p:first-of-type {
     font-size: 60px;
@@ -176,10 +185,6 @@
   > button {
     @include button;
     margin-bottom: 30px;
-
-    &:hover {
-      box-shadow: 0px 4px 4px rgba(105, 105, 105, 0.58);
-    }
   }
 
   > a {
@@ -203,11 +208,16 @@
     > p {
       font-size: 24px;
       margin-bottom: 60px;
+
+      > span {
+        font-size: 14px;
+        margin-top: 5px;
+      }
     }
   }
 
   .form-details {
-    margin-top: 174px;
+    padding-top: 174px;
 
     p:first-of-type {
       font-size: 40px;
@@ -232,11 +242,16 @@
     > p {
       font-size: 30px;
       margin-bottom: 90px;
+
+      > span {
+        font-size: 16px;
+        margin-top: 10px;
+      }
     }
   }
 
   .form-details {
-    margin-top: 246px;
+    padding-top: 246px;
 
     p:first-of-type {
       font-size: 60px;
@@ -278,6 +293,10 @@
   .form-question {
     padding-top: 112px;
 
+    > p > span {
+      margin-top: 15px;
+    }
+
     > div {
       margin-bottom: 0;
     }
@@ -291,7 +310,18 @@
     flex-direction: column;
 
     > button:first-of-type {
-      margin-bottom: 20px;
+      background: none;
+      border: none;
+      box-shadow: none;
+      color: $color-black;
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 20px;
+      order: 1;
+
+      &[disabled] {
+        display: none;
+      }
     }
 
     > p {
@@ -301,7 +331,7 @@
   }
 
   .form-details {
-    margin-top: 142px;
+    padding-top: 142px;
 
     p:first-of-type {
       font-size: 40px;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <meta name="description" content="" /> -->
+    <meta name="description" content="Edenstorm is the comprehensive digital agency which helps clients with web design and development, mobile apps, branding, graphics design and more." />
 
-    <title>edenstorm</title>
+    <title>Edenstorm - Quote Generator</title>
 
     <link rel="icon" href="/assets/images/favicon.png" />
     <link rel="stylesheet" href="/styles.scss" />
@@ -20,13 +20,12 @@
     <nav class="nav">
       <div>
         <a href="/" class="logo" aria-label="to home">
-          <img src="/assets/images/logo.png" alt="edenstorm logo" />
+          <img src="/assets/images/logo.svg" alt="edenstorm logo" />
         </a>
         <ul class="nav-links">
           <li><a href="/about" class="nav-link">About</a></li>
           <li><a href="/services" class="nav-link">Services</a></li>
           <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="/faq" class="nav-link">FAQs</a></li>
         </ul>
         <a href="/quote-generator" class="call-to-action-link">Get started</a>
 
@@ -54,11 +53,11 @@
             />
           </svg>
         </label>
+        <label for="mobile-nav-toggle" class="overlay"></label>
         <ul class="mobile-nav-links">
           <li><a href="/about" class="mobile-nav-link">About</a></li>
           <li><a href="/services" class="mobile-nav-link">Services</a></li>
           <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
-          <li><a href="/faq" class="mobile-nav-link">FAQs</a></li>
           <li>
             <a href="/quote-generator" class="mobile-nav-link active"
               >Get started</a
@@ -89,7 +88,7 @@
         <button id="start-button">Click here to begin</button>
       </div>
 
-      <form method="POST" action="https://formspree.io/lewisedc1@gmail.com">
+      <form method="POST" action="https://formspree.io/atticus@edenstorm.com">
         <div class="form-question question-multiple-choice">
           <span>Q1.</span>
           <p>Select all the types of solution you're looking for</p>
@@ -408,8 +407,7 @@
         <div class="form-question pages">
           <span>Q8.</span>
           <p>
-            How many marketing pages do you need? i.e. About us, Contact us,
-            etc.
+            How many marketing pages do you need? <span>i.e how it works, contact us, team, about, press, terms, FAQ, hiring</span> 
           </p>
           <div>
             <label for="1-3" class="form-answer">
@@ -494,13 +492,12 @@
         <a href="/quote-generator">Get a quote</a>
         <div>
           <a href="/" aria-label="to home">
-            <img src="/assets/images/logo.png" alt="edenstorm logo" />
+            <img src="/assets/images/logo.svg" alt="edenstorm logo" />
           </a>
           <ul class="footer-links">
             <li class="footer-link"><a href="/about">About</a></li>
             <li class="footer-link"><a href="/services">Services</a></li>
             <li class="footer-link"><a href="/portfolio">Portfolio</a></li>
-            <li class="footer-link"><a href="/faq">FAQ</a></li>
             <li class="footer-link"><a href="/contant">Contact</a></li>
           </ul>
           <ul class="social-links">
@@ -524,6 +521,12 @@
       </div>
     </footer>
 
+    <div class="garnishes">
+      <img src="/assets/images/garnish12.svg" alt="" class="garnish12" />
+      <img src="/assets/images/garnish13.svg" alt="" class="garnish13" />
+    </div>
+
     <script src="/index.js"></script>
+    <script src="/js/quote-generator.js"></script>
   </body>
 </html>
